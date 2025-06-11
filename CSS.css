@@ -1,0 +1,111 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: comic sans ms;
+        background-color: #eef1f5;
+        margin: 0;
+        padding: 35px;
+    }
+
+    .container {
+        max-width: 500px;
+        margin: auto;
+        background: #3939;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(1, 0, 1, 1);
+    }
+
+    h2 {
+        color: #3939;
+        border-bottom: 2px solid #1588e9;
+        padding-bottom: 5px;
+        margin-top: 0;
+    }
+
+    form {
+        margin-bottom: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+    }
+
+    input[type="text"], input[type="number"] {
+        flex: 1 1 200px;
+        padding: 10px;
+        border: 1px solid #1588e9;
+        border-radius: 4px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #3939;
+        color: black;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    button:hover {
+        background-color: #9ACD32;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #1588e9;
+    }
+
+    td form {
+        display: inline;
+    }
+
+    @media (max-width: 600px) {
+        form {
+            flex-direction: column;
+        }
+
+        input, button {
+            width: 100%;
+        }
+
+        table, thead, tbody, th, td, tr {
+            display: block;
+        }
+
+        tr {
+            margin-bottom: 15px;
+        }
+
+        td {
+            padding-left: 50%;
+            position: relative;
+        }
+
+        td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 10px;
+            font-weight: bold;
+        }
+
+        th {
+            display: none;
+        }
+    }
+</style>
